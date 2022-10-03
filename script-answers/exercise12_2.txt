@@ -1,0 +1,10 @@
+Script started on 2022-09-30 14:19:37-07:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+]0;reese@DESKTOP-995Q1KA: ~/dev/fso-containers/script-answers[01;32mreese@DESKTOP-995Q1KA[00m:[01;34m~/dev/fso-containers/script-answers[00m$ exi[K[K[Kmkdi[K[K[K[Kdocker run -it ubuntu bash
+[?2004h]0;root@227341b33b6e: /root@227341b33b6e:/# [K]0;root@227341b33b6e: /root@227341b33b6e:/# mkdir /usr/src/asp  pp
+[?2004l[?2004h]0;root@227341b33b6e: /root@227341b33b6e:/# touch /usr/src/ap[  pp/on   /i  .inde     /index.js
+[?2004l[?2004h]0;root@227341b33b6e: /root@227341b33b6e:/# [Kexit
+[?2004lexit
+]0;reese@DESKTOP-995Q1KA: ~/dev/fso-containers/script-answers[01;32mreese@DESKTOP-995Q1KA[00m:[01;34m~/dev/fso-containers/script-answers[00m$ exit
+exit
+
+Script done on 2022-09-30 14:20:14-07:00 [COMMAND_EXIT_CODE="0"]
