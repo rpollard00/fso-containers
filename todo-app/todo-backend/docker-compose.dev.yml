@@ -17,9 +17,6 @@ services:
     restart: always
     ports:
       - 6379:6379
+    command: ["redis-server", "--appendonly", "yes"]
     volumes:
-      - cache:/data
-
-volumes:
-  cache:
-    driver: local
+      - ./redis_data:/data

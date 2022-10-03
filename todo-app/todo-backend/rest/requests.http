@@ -7,7 +7,7 @@ POST http://localhost:3000/todos
 Content-Type: application/json
 
 {
-  "text": "Docker has a lot of files"
+  "text": "Docker has a lot of files 3"
 }
 
 ###
@@ -15,6 +15,6 @@ PUT http://localhost:3000/todos/633b078115b636a3b519ad6b
 Content-Type: application/json
 
 {
-  "text": "I have updated the text further again 5",
+  "text": "I have updated the text further again",
   "done": false
 }
