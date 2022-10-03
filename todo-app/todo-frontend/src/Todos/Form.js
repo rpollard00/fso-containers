@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const TodoForm = ({ createTodo }) => {
-  const [text, setText] = useState('')
+  const [text, setText] = useState("")
 
   const onChange = ({ target }) => {
     setText(target.value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
     createTodo({ text })
   }
