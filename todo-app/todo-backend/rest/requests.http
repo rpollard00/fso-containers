@@ -1,0 +1,20 @@
+
+GET http://localhost:3000/todos
+
+###
+
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "text": "Docker has a lot of files"
+}
+
+###
+PUT http://localhost:3000/todos/633b078115b636a3b519ad6b
+Content-Type: application/json
+
+{
+  "text": "I have updated the text further again 5",
+  "done": false
+}
