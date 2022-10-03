@@ -1,0 +1,135 @@
+Script started on 2022-10-03 10:31:02-07:00 [TERM="xterm-256color" TTY="/dev/pts/18" COLUMNS="133" LINES="24"]
+]0;reese@DESKTOP-995Q1KA: ~/dev/fso-containers/todo-app/todo-backend[01;32mreese@DESKTOP-995Q1KA[00m:[01;34m~/dev/fso-containers/todo-app/todo-backend[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS                     NAMES
+377dfb85f92d   mongo     "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3456->27017/tcp   todo-backend_mongo_1
+]0;reese@DESKTOP-995Q1KA: ~/dev/fso-containers/todo-app/todo-backend[01;32mreese@DESKTOP-995Q1KA[00m:[01;34m~/dev/fso-containers/todo-app/todo-backend[00m$ docker container -it todo-backend_[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexec -it todo-backend_mongo_1 bash
+root@377dfb85f92d:/# [Kroot@377dfb85f92d:/# ls
+bin   data  docker-entrypoint-initdb.d	home	    lib    lib64   media  opt	root  sbin  sys  usr
+boot  dev   etc				js-yaml.js  lib32  libx32  mnt	  proc	run   srv   tmp  var
+root@377dfb85f92d:/# mongosh
+]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	633b1c8d5b230dcf541f8071
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0[0m
+Using MongoDB:		6.0.2
+[1m[33mUsing Mongosh[0m:		1.6.0
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1G[0Jtest> [7Gshwo [1G[0Jtest> shwo[11G[1G[0Jtest> shw[10G[1G[0Jtest> sh[9Gow dbs
+Uncaught [1m[31mMongoServerError[0m: command listDatabases requires authentication
+[1G[0Jtest> [7Gexit
+root@377dfb85f92d:/# mongosh -u root -p example
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	633b1ca0e44f64c5a1618a72
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0[0m
+Using MongoDB:		6.0.2
+[1m[33mUsing Mongosh[0m:		1.6.0
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2022-10-03T16:02:10.157+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2022-10-03T16:02:10.393+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2022-10-03T16:02:10.393+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1m[33m------[0m
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gsgh[1G[0Jtest> sg[9G[1G[0Jtest> s[8Ghow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("633b078115b636a3b519ad6a"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("633b078115b636a3b519ad6b"),
+    text: [32m'I have updated the text further again 5'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("633b0dddef51174469025a7c"),
+    text: [32m'Docker has a lot of files'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.collection
+the_database.collection
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.collection[28G.[1G[0Jthe_database> db.collection[28G[1G[0Jthe_database> db.collectio[27G[1G[0Jthe_database> db.collecti[26G[1G[0Jthe_database> db.collect[25G[1G[0Jthe_database> db.collec[24G[1G[0Jthe_database> db.colle[23G[1G[0Jthe_database> db.coll[22G[1G[0Jthe_database> db.col[21G[1G[0Jthe_database> db.co[20G[1G[0Jthe_database> db.c[19G[1G[0Jthe_database> db.[18Gtodos.insertOne(
+[1G[0J... [5G<d[36mdo[39mdocumen[36mdocument[39m>,
+Uncaught:
+[1m[31mSyntaxError[0m: Support for the experimental syntax 'jsx' isn't currently enabled (2:1):
+
+[0m [90m 1 |[39m db[33m.[39mtodos[33m.[39minsertOne([0m
+[0m[31m[1m>[22m[39m[90m 2 |[39m [33m<[39m[33mdocument[39m[33m>[39m[33m,[39m[0m
+[0m [90m   |[39m [31m[1m^[22m[39m[0m
+[0m [90m 3 |[39m[0m
+
+Add @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing.
+
+[1G[0Jthe_database> [15Gdb.collection.[1G[0Jthe_database> db.collection[28G[1G[0Jthe_database> db.collectio[27G[1G[0Jthe_database> db.collecti[26G[1G[0Jthe_database> db.collect[25G[1G[0Jthe_database> db.collec[24G[1G[0Jthe_database> db.colle[23G[1G[0Jthe_database> db.coll[22G[1G[0Jthe_database> db.col[21G[1G[0Jthe_database> db.co[20G[1G[0Jthe_database> db.c[19G[1G[0Jthe_database> db.[18Gtodos.insertOne(
+[1G[0J... [5Gtex[1G[0J... te[7G[1G[0J... t[6G[1G[0J... [5G[32m"[39m[1G[0J... [5G{
+[1G[0J... [5G  text[1G[0J...   tex[10G[1G[0J...   te[9G[1G[0J...   t[8G[1G[0J...   [7G[32m"[39m[32mt[39m[32me[39m[32mx[39m[32mt[39m[32m"[39m: I[1G[0J...   [32m"text"[39m: [15G[32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m,
+[1G[0J... [5G  [32m"[39m[32md[39m[32mo[39m[32mn[39m[32me[39m[32m"[39m: fals[33mfalse[39m,[1G[0J...   [32m"done"[39m: [33mfalse[39m[20G
+[1G[0J... [5G}
+[1G[0J... [5G
+[1G[0J... [5G)
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("633b1d39f1fe7bd7b16dd31f")
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne( { [32m"text"[39m: [32m"Increase the number of tools in my toolbelt"[39m, [32m"done"[39m: [33mfalse[39m })[108G[1G[0Jthe_database> db.todos.insertOne( <document>,[46G[1G[0Jthe_database> db.collection[28G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> show collections[31G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId("633b078115b636a3b519ad6a"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("633b078115b636a3b519ad6b"),
+    text: [32m'I have updated the text further again 5'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("633b0dddef51174469025a7c"),
+    text: [32m'Docker has a lot of files'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("633b1d39f1fe7bd7b16dd31f"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+root@377dfb85f92d:/# exit
+exit
+]0;reese@DESKTOP-995Q1KA: ~/dev/fso-containers/todo-app/todo-backend[01;32mreese@DESKTOP-995Q1KA[00m:[01;34m~/dev/fso-containers/todo-app/todo-backend[00m$ exit
+exit
+
+Script done on 2022-10-03 10:35:17-07:00 [COMMAND_EXIT_CODE="0"]
