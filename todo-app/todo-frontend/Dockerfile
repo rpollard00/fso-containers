@@ -4,7 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENV REACT_APP_BACKEND_URL http://localhost:3000
 ENV CI true
 
 RUN npm ci
@@ -17,6 +16,6 @@ RUN npm run test
 
 FROM build as prod
 
-RUN npm install -g serve
+#RUN npm install -g serve
 
-CMD ["serve", "build"]
+CMD ["npm", "start"]

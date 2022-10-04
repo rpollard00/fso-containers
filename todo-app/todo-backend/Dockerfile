@@ -7,7 +7,7 @@ COPY . .
 
 RUN npm ci
 
-ENV DEBUG express:*
+#ENV DEBUG express:*
 ENV NODE_ENV production
 
 #USER node
